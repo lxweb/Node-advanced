@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  h1.title= title
+
+  form(name='miForm' action='/confirmation' method='POST')
+
+    div.field
+      label.label Nombre 
+      div.control.has-icons-left.has-icons-right
+        input.input(type='text' name='username' placeholder='Nombre')
+        span.icon.is-small.is-left
+          i.fa.fa-user
+
+    div.field
+      label.label Email 
+      div.control.has-icons-left.has-icons-right
+        input.input(type='text' name='email' placeholder='Email')
+        span.icon.is-small.is-left
+          i.fa.fa-envelope
+
+     div.field
+      button(type='submit' name='submit') Send confirmation
